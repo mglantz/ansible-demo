@@ -35,6 +35,8 @@ jobs:
           cd $GITHUB_WORKSPACE
           for playbook in $(ls *.yml)
           do
-            echo "Linting playbook: $playbook"
+            echo "-------------------------------------"
+            echo "# Linting playbook: $playbook"
+            echo "-------------------------------------"
             ansible-lint $playbook
           done
