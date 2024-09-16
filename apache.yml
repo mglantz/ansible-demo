@@ -3,11 +3,11 @@
   hosts: all
   tasks:
     - name: Ensure the httpd software is installed
-      yum:
+      ansible.builtin.dnf:
         name: httpd
         state: present
     - name: Ensure the httpd service is enabled and started
-      service:
+      ansible.builtin.service:
         name: httpd
         state: started
-        enabled: yes
+        enabled: true
