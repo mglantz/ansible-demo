@@ -30,8 +30,9 @@ jobs:
         run: pip install ansible ansible-lint
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Tests that you have to pass
         run: |
+          echo "If you need assistence with the errors thrown below. Comment in your PR."
           cd $GITHUB_WORKSPACE
           for playbook in $(ls *.yml)
           do
