@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: Ensure the httpd software is installed
-      ansible.builtin.package:
+      dnf:
         name: httpd
         state: present
     - name: Ensure the httpd service is enabled and started
